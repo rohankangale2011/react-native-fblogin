@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, Dimensions } from 'react-native';
+import { Text, View } from 'react-native';
 
 const FBSDK = require('react-native-fbsdk');
 const {
@@ -19,7 +19,7 @@ class LoginComponent extends Component {
 
     render() {
         return (
-            <View style={styles.loginMain}>
+            <View>
                 <LoginButton
                     publishPermissions={["publish_actions"]}
                     onLoginFinished={
@@ -42,12 +42,5 @@ class LoginComponent extends Component {
         );
     }
 }
-
-const window = Dimensions.get('window');
-const styles = StyleSheet.create({
-    loginMain: {
-       // position: 'absolute', top: window.height / 2,  width: window.width, alignItems: 'center', justifyContent: 'center'
-    }
-});
 
 export default LoginComponent;
