@@ -11,8 +11,7 @@ class MainComponent extends Component {
 
     _shareData(item) {
         Share.share({
-            message: `<h2>Movie details</h2>
-                Movie Name: ${item.name} <br />
+            message: `Movie Name: ${item.name},
                 Movie Genre: ${item.genre}`
         },
         {
