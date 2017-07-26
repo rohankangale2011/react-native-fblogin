@@ -5,7 +5,7 @@ import MainContainer from './app/containers/main/main.container';
 import { StackNavigator } from 'react-navigation';
 
 const AppComponent = StackNavigator({
-  Login: { screen: MainContainer },
+  Login: { screen: LoginContainer },
   Main: { screen: MainContainer }
 },
   {
