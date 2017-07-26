@@ -1,0 +1,44 @@
+{
+    "movieList": [
+        {
+            "name": "Movie 1",
+            "genre": "Comedy"
+        },
+        {
+            "name": "Movie 2",
+            "genre": "Horror"
+        },
+        {
+            "name": "Movie 3",
+            "genre": "Thriller"
+        },
+        {
+            "name": "Movie 4",
+            "genre": "Animation"
+        },
+        {
+            "name": "Movie 5",
+            "genre": "Bollywood"
+        },
+        {
+            "name": "Movie 6",
+            "genre": "Drama"
+        },
+        {
+            "name": "Movie 7",
+            "genre": "Historical"
+        },
+        {
+            "name": "Movie 8",
+            "genre": "Thriller"
+        },
+        {
+            "name": "Movie 9",
+            "genre": "Thriller"
+        },
+        {
+            "name": "Movie 10",
+            "genre": "Comedy"
+        }
+    ]
+}
