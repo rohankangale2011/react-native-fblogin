@@ -49,24 +49,24 @@ class ModalComponent extends Component {
                                 selectedValue={this.state.genre}
                                 onValueChange={(itemValue, itemIndex) => this.setState({ genre: itemValue }) }>
                                 <Picker.Item label="Select genre" value="" />
-                                <Picker.Item label="Comedy" value="comedy" />
-                                <Picker.Item label="Horror" value="horror" />
-                                <Picker.Item label="Thriller" value="thriller" />
-                                <Picker.Item label="Animation" value="animation" />
-                                <Picker.Item label="Bollywood" value="bollywood" />
-                                <Picker.Item label="Drama" value="drama" />
-                                <Picker.Item label="Historical" value="historical" />
+                                <Picker.Item label="Comedy" value="Comedy" />
+                                <Picker.Item label="Horror" value="Horror" />
+                                <Picker.Item label="Thriller" value="Thriller" />
+                                <Picker.Item label="Animation" value="Animation" />
+                                <Picker.Item label="Bollywood" value="Bollywood" />
+                                <Picker.Item label="Drama" value="Drama" />
+                                <Picker.Item label="Historical" value="Historical" />
                             </Picker>
                         </View>
                         <View style={{ position: 'absolute', bottom: 50, width: window.width - 40, marginLeft: 20, marginRight: 20 }}>
                             <TouchableNativeFeedback onPress={this._addNewMovieDetails}>
                                 <View style={styles.addButton}>
-                                    <Text>Add</Text>
+                                    <Text style={styles.addBtnText}>Add</Text>
                                 </View>
                             </TouchableNativeFeedback>
                             <TouchableNativeFeedback onPress={this._closeModal}>
                                 <View style={styles.cancelButton}>
-                                    <Text>Cancel</Text>
+                                    <Text style={styles.cancelBtnText}>Cancel</Text>
                                 </View>
                             </TouchableNativeFeedback>
                         </View>
@@ -87,10 +87,13 @@ const styles = StyleSheet.create({
         paddingLeft: 10
     },
     addButton: {
-        backgroundColor: 'green', alignItems: 'center', padding: 10, borderRadius: 2
+        backgroundColor: '#26a69a', alignItems: 'center', padding: 10, borderRadius: 2
+    },
+    addBtnText: {
+        color: '#fff'
     },
     cancelButton: {
-        backgroundColor: 'red', alignItems: 'center', padding: 10, borderRadius: 2, marginTop: 10
+        alignItems: 'center', padding: 10, borderRadius: 2, marginTop: 10, borderColor: '#26a69a', borderWidth: 1
     }
 });
 

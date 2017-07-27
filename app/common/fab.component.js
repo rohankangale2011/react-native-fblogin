@@ -13,7 +13,7 @@ export default class FabComponent extends Component {
 
     render() {
         return (
-            <TouchableHighlight activeOpacity={1} underlayColor="#45C3AB" style={styles.fabButton} onPress={this._showModal}>
+            <TouchableHighlight activeOpacity={1} underlayColor="#4dd0e1" style={styles.fabButton} onPress={this._showModal}>
                 <Text style={{ paddingTop: 10, paddingLeft: 22, fontSize: 30, fontWeight: 'bold'}}>+</Text>
             </TouchableHighlight>
         );
@@ -30,6 +30,6 @@ const styles = StyleSheet.create({
         bottom: 40,
         right: 10,
         zIndex: 99999,
-        backgroundColor: '#00CAFF'
+        backgroundColor: '#80deea'
     }
 });

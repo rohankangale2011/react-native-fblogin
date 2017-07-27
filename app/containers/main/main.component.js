@@ -38,6 +38,7 @@ class MainComponent extends Component {
         return (
             <View style={styles.mainContainer}>
                 <ToolbarAndroid
+                    titleColor="#ffffff"
                     style={styles.toolbarContainer}
                     title="ReactNativeApp" />
                 <View style={styles.bodyContainer}>
@@ -58,7 +59,7 @@ const styles = StyleSheet.create({
         height: window.height, backgroundColor: '#fff'
     },
     toolbarContainer: {
-        width: window.width, height: 60, backgroundColor: '#ddd'
+        width: window.width, height: 60, backgroundColor: '#0097a7'
     },
     bodyContainer: {
         height: window.height - 60, paddingBottom: 25

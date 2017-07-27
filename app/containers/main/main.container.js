@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Modal } from 'react-native';
+import { Text, View, Dimensions, ActivityIndicator } from 'react-native';
 import data from '../../common/data';
 import ApiUtils from '../../common/api-utils';
 import FabComponent from '../../common/fab.component';
@@ -11,7 +11,8 @@ class MainContainer extends Component {
         super(props);
         this.state = {
             movieList: [],
-            modalVisible: true
+            modalVisible: false,
+            showLoader: false
         };
         this._setModalVisibility = this._setModalVisibility.bind(this);
         this._addNewMovie = this._addNewMovie.bind(this);
@@ -30,7 +31,12 @@ class MainContainer extends Component {
     }
 
     _addNewMovie(data) {
-        this.state.movieList.push(data.data);
+        var self = this;
+        self.setState({ showLoader: true });
+        setTimeout(function() {
+            self.state.movieList.push(data.data);
+            self.setState({ showLoader: false });
+        }, 3000);
     }
 
     render() {
@@ -39,7 +45,9 @@ class MainContainer extends Component {
                 {this.state.modalVisible && (
                     <ModalComponent setModalVisibility={this._setModalVisibility} addNewData={this._addNewMovie}/>
                 ) }
-
+                {this.state.showLoader && (
+                    <ActivityIndicator animating={this.state.showLoader} color="#fff" size="large" style={{ position: 'absolute', width: window.width, height: window.height, backgroundColor: '#333', zIndex: 999999999, opacity: 0.5}}/>
+                )}
                 <MainComponent movieListData={this.state.movieList}/>
                 <FabComponent setModalVisibility={this._setModalVisibility}/>
             </View>
@@ -47,4 +55,5 @@ class MainContainer extends Component {
     }
 }
 
+const window = Dimensions.get('window');
 export default MainContainer;
