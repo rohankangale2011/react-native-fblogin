@@ -1,7 +1,7 @@
 # React Native facebook login + Sharing application data using various native features
 Facebook login component using react native + Flatlist example
 
-A basic example showing the facebook login using react-native application. The setup for facebook login you can check from <a href="https://github.com/facebook/react-native-fbsdk">HERE</a>. Although, you need to do some changes while doing the setup.
+A basic example showing the facebook login using react-native application. Run <strong>npm install</strong> on the root directory and follow <a href="https://github.com/facebook/react-native-fbsdk">THIS</a> link to setup facebook login in your react native application. Although, you need to do some changes while doing the setup.
 1. As per setup, you need to install and link <strong>react-native-fbsdk</strong>. So instead of react-native install react-native-fbsdk, you should do <strong>npm install react-native-fbsdk@0.6.0 --save</strong>
 2. After installing, you should link it: <strong>react-native link react-native-fbsdk</strong>
 3. after successfull linking, you have to change the react-native-fbdsk's buidl.gradle file(change the facebook android sdk version as it causes issue while building/running the app on emulator). Update compile('com.facebook.android:facebook-android-sdk:4.+') to <strong>compile('com.facebook.android:facebook-android-sdk:4.22.1')</strong>
