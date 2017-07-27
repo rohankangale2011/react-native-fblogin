@@ -1,4 +1,4 @@
-# react-native-fblogin
+# React Native facebook login + Sharing application data using various native features
 Facebook login component using react native + Flatlist example
 
 A basic example showing the facebook login using react-native application.
